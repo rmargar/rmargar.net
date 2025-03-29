@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="footer-copyright footer-text">Copyright © 2023, <a class="footer-link" href="https://rmargar.net">Ricardo
+        <div class="footer-copyright footer-text">Copyright © 2025, <a class="footer-link" href="https://rmargar.net">Ricardo
                 Martinez</a></div>
     </div>
 </section>

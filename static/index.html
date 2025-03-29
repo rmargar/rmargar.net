@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ricardo Martinez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricardo Martinez Garcia</title>
 
     <link rel="stylesheet" href="/static/stylesheets/main.css" type="text/css" />
 
@@ -65,19 +66,19 @@
             <div class="header__sm-menu-content">
                 <ul class="header__sm-menu-links">
                     <li class="header__sm-menu-link">
-                        <a href="/static/index.html"> Home </a>
+                        <a href="#home"> Home </a>
                     </li>
-
                     <li class="header__sm-menu-link">
-                        <a href="/static/index.html#about"> About </a>
+                        <a href="#about"> About </a>
                     </li>
-
                     <li class="header__sm-menu-link">
-                        <a href="/static/index.html#projects"> Projects </a>
+                        <a href="#experience"> Experience </a>
                     </li>
-
                     <li class="header__sm-menu-link">
-                        <a href="/static/index.html#contact"> Contact! </a>
+                        <a href="#projects"> Projects </a>
+                    </li>
+                    <li class="header__sm-menu-link">
+                        <a href="#contact"> Contact </a>
                     </li>
                     <li class="header__sm-menu-link">
                         <a href="/blog"> Blog </a>
@@ -102,7 +103,7 @@
         </div>
 
     </section>
-    <section class="sec-pad about" id="about">
+    <section class="sec-pad about" id="about" style="height: auto;">
         <div class="main-container about-content">
             <h2 class="heading-section"> About me</h2>
             <div class="heading-icon"> <i class="material-icons">more_horiz</i></div>
@@ -334,6 +335,37 @@
           console.log("callback called")
           submitButton.removeAttribute("disabled");
         }
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const hamMenuBtn = document.querySelector('.header__main-ham-menu');
+          const hamMenuCloseBtn = document.querySelector('.header__main-ham-menu-close');
+          const smallMenu = document.querySelector('.header__sm-menu');
+          const smallMenuLinks = document.querySelectorAll('.header__sm-menu-link a');
+          
+          // Toggle mobile menu
+          hamMenuBtn.addEventListener('click', function() {
+            hamMenuBtn.classList.add('d-none');
+            hamMenuCloseBtn.classList.remove('d-none');
+            smallMenu.classList.add('header__sm-menu--active');
+          });
+          
+          // Close mobile menu
+          hamMenuCloseBtn.addEventListener('click', function() {
+            hamMenuCloseBtn.classList.add('d-none');
+            hamMenuBtn.classList.remove('d-none');
+            smallMenu.classList.remove('header__sm-menu--active');
+          });
+          
+          // Close mobile menu after clicking a link
+          smallMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              hamMenuCloseBtn.classList.add('d-none');
+              hamMenuBtn.classList.remove('d-none');
+              smallMenu.classList.remove('header__sm-menu--active');
+            });
+          });
+        });
       </script>
 </body>
 
