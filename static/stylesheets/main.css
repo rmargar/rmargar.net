@@ -473,6 +473,10 @@ li {
   flex: 0 0 25%; /* 4 items per row by default */
   padding: 1rem;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
 }
 
 @media only screen and (max-width: 75em) {
@@ -494,19 +498,20 @@ li {
 }
 
 .about_skill_box img {
-  width: 15rem;
+  width: 7rem; /* Increased from original */
   height: 7rem;
-  margin: auto;
+  margin: 0 auto 1rem auto; /* Added bottom margin to create space between image and text */
   padding: 5%;
-  margin: 1rem 0 0 0;
   object-fit: contain;
+  display: block; /* Ensures proper centering */
 }
 
 .about_skill_box figcaption {
   text-align: center;
   font-size: 1.5rem;
+  width: 100%; /* Ensures the caption uses the full width */
+  display: block; /* Makes it behave as a block element */
 }
-
 /* Experience section */
 .experience {
   background: rgba(240, 240, 240, 0.8);
