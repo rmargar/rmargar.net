@@ -17,7 +17,7 @@ require (
 	github.com/stretchr/testify v1.10.0
 	github.com/yuin/goldmark v1.7.8
 	gorm.io/driver/postgres v1.5.11
-	gorm.io/gorm v1.25.12
+	gorm.io/gorm v1.30.0
 	gotest.tools v2.2.0+incompatible
 )
 
@@ -62,9 +62,9 @@ require (
 	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/crypto v0.19.0 // indirect
 	golang.org/x/net v0.21.0 // indirect
-	golang.org/x/sync v0.1.0 // indirect
+	golang.org/x/sync v0.9.0 // indirect
 	golang.org/x/sys v0.17.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/text v0.20.0 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/genproto v0.0.0-20220314164441-57ef72a4c106 // indirect
 	google.golang.org/grpc v1.45.0 // indirect
